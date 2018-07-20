@@ -1,0 +1,137 @@
+<header class="top header-v1 desktops-section default-top">
+    <!-- top-bar -->
+    <!-- top-bar -->
+    <!-- S top-main -->
+    <div class="top-main">
+        <div class="page-width clearfix">
+            <div class="logo" skinobjectzone="HtmlLogo_399">
+                <a href="http://gzjbjn.com">
+                    <img src="Portals/897/_thumbs/ba6dddac-f59f-4ba5-8dca-599ffe480c67_0_70_UseHeight.jpg" alt="广州捷邦" />
+                </a>
+            </div>
+            <!-- end of logo -->
+            <div class="top-main-content float-right">
+                <!-- S language -->
+                <div class="language" skinobjectzone="HtmlLanguage_461">
+                    <a class="first-level" href="http://gzjbjn.com">
+                        <span>中文简体</span>
+                    </a>
+                </div>
+                <!-- S nav -->
+                <nav class="nav">
+                    <div class="main-nav clearfix" skinobjectzone="menu_569">
+                        <ul class="sf-menu">
+                            <li class="current">
+                                <a class="first-level" href="/index" target="">
+                                    <strong>首页</strong>
+                                </a><i></i>
+                            </li>
+                            <li class="current">
+                                <a class="first-level" href="/plist" target="">
+                                <strong>产品展示</strong>
+                                </a><i></i>
+                                <ul class="">
+                                        <% cList.forEach(function(pc) { %>
+                                        <li class=""><a class="" href="/plist?c=<%= pc.ID %>" target=""><strong><%= pc.Name %></strong></a></li>
+                                        <% }); %>
+                                </ul>
+                            </li>
+                            <li class="current">
+                                <a class="first-level" href="/contact" target="">
+                                    <strong>联系我们</strong>
+                                </a><i></i>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- E nav-->
+            </div>
+        </div>
+    </div>
+    <!-- E top-main -->
+    <div class="clear">
+    </div>
+</header>
+<!-- S touch-top-wrapper -->
+<div class="touch-top mobile-section clearfix">
+    <div class="touch-top-wrapper clearfix">
+        <div class="touch-logo" skinobjectzone="HtmlLogo_2577">
+            <a class="" href="http://gzjbjn.com">
+                <img src="Portals/897/_thumbs/ba6dddac-f59f-4ba5-8dca-599ffe480c67_0_70_UseHeight.jpg"
+                    alt="广州捷邦" />
+            </a>
+        </div>
+        <!-- S touch-navigation -->
+        <div class="touch-navigation">
+            <div class="touch-toggle">
+                <ul>
+                    <li class="touch-toggle-item-first">
+                        <a href="javascript:;" class="drawer-language"
+                            data-drawer="drawer-section-language"><i class="touch-icon-language"></i><span>语言</span></a>
+                    </li>
+                    <li class="touch-toggle-item-last">
+                        <a href="javascript:;" class="drawer-menu" data-drawer="drawer-section-menu">
+                            <i class="touch-icon-menu"></i><span>导航</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- E touch-navigation -->
+    </div>
+    <!-- S touch-top -->
+    <div class="touch-toggle-content touch-top-home">
+        <div class="drawer-section drawer-section-menu">
+            <div class="touch-menu" skinobjectzone="menu_3054">
+                <ul>
+                    <li><a href="http://gzjbjn.com"><span>首页</span></a></li>
+                    <li>
+                        <a href="javascript:;"><span>产品展示</span><i class="touch-arrow-down"></i></a>
+                        <ul>
+                            <% cList.forEach(function(pc) { %>
+                            <li class=""><a class="" href="/plist?c=<%= pc.ID %>" target=""><strong><%= pc.Name %></strong></a></li>
+                            <% }); %>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="/contact"><span>联系我们</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $(".touch-toggle a").click(function (event) {
+                    var className = $(this).attr("data-drawer");
+
+                    if ($("." + className).css('display') == 'none') {
+                        $("." + className).slideDown().siblings(".drawer-section").slideUp();
+                    } else {
+                        $(".drawer-section").slideUp();
+                    }
+                    event.stopPropagation();
+                });
+
+
+                $('.touch-menu a').click(function () {
+                    if ($(this).next().is('ul')) {
+                        if ($(this).next('ul').css('display') == 'none') {
+                            $(this).next('ul').slideDown();
+                            $(this).find('i').attr("class", "touch-arrow-up");
+                        } else {
+                            $(this).next('ul').slideUp();
+                            $(this).next('ul').find('ul').slideUp();
+                            $(this).find('i').attr("class", "touch-arrow-down");
+                        }
+                    }
+                });
+            });
+        </script>
+
+    </div>
+    <!-- E touch-top -->
+</div>
+<!-- E touch-top-wrapper -->
+<!-- ==================== E top ==================== -->
