@@ -21,12 +21,13 @@
                 <nav class="nav">
                     <div class="main-nav clearfix" skinobjectzone="menu_569">
                         <ul class="sf-menu">
-                            <li class="current">
+                       
+                            <li class=<%= (url==='/index'?'current':'') %>>
                                 <a class="first-level" href="/index" target="">
                                     <strong>首页</strong>
                                 </a><i></i>
                             </li>
-                            <li class="current">
+                            <li class=<%= (url==='/plist'?'current':'') %>>
                                 <a class="first-level" href="/plist" target="">
                                 <strong>产品展示</strong>
                                 </a><i></i>
@@ -36,7 +37,7 @@
                                         <% }); %>
                                 </ul>
                             </li>
-                            <li class="current">
+                            <li class=<%= (url==='/contact'?'current':'') %>>
                                 <a class="first-level" href="/contact" target="">
                                     <strong>联系我们</strong>
                                 </a><i></i>
@@ -71,6 +72,7 @@
                     </li>
                     <li class="touch-toggle-item-last">
                         <a href="javascript:;" class="drawer-menu" data-drawer="drawer-section-menu">
+                        
                             <i class="touch-icon-menu"></i><span>导航</span>
                         </a>
                     </li>

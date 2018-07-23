@@ -12,14 +12,19 @@ class ProductCategory{
       return new Promise((resolve,reject)=>{
         let sql = `select ID, Name, Detial  FROM  Category ORDER BY ID limit ?,?`;
         let arr = [{sql:sql,params:[start,end]}];
-        execTrans(arr,function(err,info){
-          if(err){reject(err);}
-          else{
-            // console.log(info);
-            resolve(info);
+        execTrans(arr).then(info => {
+          let cList = [];
+          if(info && info.length > 0 && info[0].length > 0){
+            info[0].forEach(row => {
+                cList.push(row);
+              });
           }
+          resolve(cList);
+        }).catch(err => {
+          if(err){reject(err);}
         })
       })
   }
+
 }
 module.exports = ProductCategory;

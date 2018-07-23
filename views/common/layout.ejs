@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head id="Head">
+    <%- include('head',{}) -%>
+    <title>广州捷邦节能设备制造有限公司 </title>
+</head>
+<body class="font-zh-CN" style="">
+    <%- include('js',{}) -%>
+    <div id="wrapper" class="insi-page">
+      <!-- ==================== S top ==================== -->
+      <%- include('menu',{cList:cList,url: url}) -%>
+      <!-- ==================== E top ==================== -->
+      <!-- ==================== S header ==================== -->
+      <div id="a1portalSkin_headerAreaA" class="header">
+        <!-- Start_Module_74429 -->
+        <div class="module-default">
+            <div class="module-inner">
+                <div id="a1portalSkin_ctr7442974429_mainArea" class="module-content">
+                    <!-- Start_Module_74429 -->
+                    <!-- S slideshow -->
+
+
+                    <div>
+                        <div id="foo1">
+                            <img src="/Portals/897/_thumbs/0738b4ab-387c-4620-b20b-7609800a3f49_0_420_UseHeight.jpg"
+                                height="420" alt="产品展示">
+                        </div>
+                        <div id="carousel-page" style="display: none"></div>
+                    </div>
+
+
+                    <script type="text/javascript">
+                        $(window).bind("load resize", function () {
+                            $("#foo1").carouFredSel({
+                                width: '100%',
+                                items: { visible: 1 },
+                                auto: { pauseOnHover: true, timeoutDuration: 3000 },
+                                swipe: { onTouch: true, onMouse: true },
+                                //pagination: "#carousel-page",
+                                scroll: { fx: "crossfade" }
+                            });
+                        });
+                    </script>
+
+                    <!-- E slideshow -->
+                    <!-- End_Module_74429 -->
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- ==================== E Header ==================== -->
+      <!-- ==================== S main ==================== -->
+      <% if(mainObj){ %>
+        <%- include(mainObj.templatePath, mainObj.data) -%>
+      <% } %>
+      
+      <!-- ==================== E main ==================== -->
+      <!-- ==================== S footer ==================== -->
+      <%- include('footer',{})%>
+      <!-- ==================== E footer ==================== -->
+      <!-- ==================== S bottom ==================== -->
+      <section class="bottom">
+         <div id="a1portalSkin_bottomAreaA" class="QHDEmptyArea page-width clearfix"></div>
+     </section>
+     <!-- ==================== E bottom ==================== -->
+
+     <!-- end of wrapper -->
+     <%- include('rightslide',{}) %>
+    </div>
+</body>

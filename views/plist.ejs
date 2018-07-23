@@ -1,0 +1,102 @@
+<section class="main">
+<div class="page-width clearfix">
+    <!-- S content -->
+    <section class="content float-right">
+        <!-- S page-title -->
+        <section class="page-title page-title-inner clearfix">
+            <!-- S breadcrumbs -->
+            <div class="breadcrumbs float-right" skinobjectzone="HtmlBreadCrumb_3715">
+                <span>当前位置：</span>
+                <a class="breadcrumbs-home" href="/index">首页</a>
+                <i>&gt;</i>
+                <a href="/plist">产品展示</a>
+                <i>&gt;</i>
+                <strong><%= category.Name %></strong>
+            </div>
+            <!-- E breadcrumbs -->
+            <!-- S page-name -->
+            <div class="page-name float-left">
+                <h2><%= category.Name %></h2>
+            </div>
+            <!-- E page-name -->
+        </section>
+        <!-- E page-title -->
+        <div id="a1portalSkin_mainArea" class="content-wrapper">
+            <!-- Start_Module_74432 -->
+
+            <div class="module-default">
+                <div class="module-inner">
+                    <div id="a1portalSkin_ctr7443274432_mainArea" class="module-content">
+                        <!-- Start_Module_74432 -->
+                        <!-- S portfolio-list -->
+                        <div class="portfolio-list product-list">
+                          <ul class="column clearfix">
+                            <% var rows = pList.length / 4; 
+                            for (var k = 0; k <= rows; k++) { 
+                              var products = pList.splice(0,4);
+                              var cloumn = 0;
+                              products.forEach(function(p){ 
+                                cloumn++; %>
+                                <li class="col-4-1 fadeInUp animated" data-animate="fadeInUp" data-delay="<%= 200*cloumn %>">
+                                  <div class="product-item">
+                                    <div class="portfolio-img">
+                                        <a href="product.aspx?id=<%=p.ID %>" target="_blank">
+                                            <img src="<%= p.url %>" alt="<%= p.alt %>"></a>
+                                    </div>
+                                    <div class="portfolio-title">
+                                        <h2><a href="product.aspx?id=<%=p.ID %>" target="_blank"><%= p.alt %></a></h2>
+                                    </div>
+                                  </div>
+                                </li>
+                              <% }) 
+                            } %>
+                          </ul>
+                        </div>
+                        <!-- E portfolio-list -->
+                        <!-- S pagination -->
+                        <!-- E pagination -->
+                        <!-- End_Module_74432 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- S content -->
+    <!-- S sidebar -->
+    <section class="sidebar float-left">
+        <!-- S page-menu -->
+        <section class="page-menu" skinobjectzone="menu_3898">
+            <div class="page-menu-title">
+                <h3>产品展示</h3>
+            </div>
+            <div class="page-menu-content">
+                <ul>
+                <% cList.forEach(function(c){ %>
+                      <li class="<%= c.ID == category.ID ? 'current':''%>"><a href="/plist?c=<%= c.ID %>" target=""><%= c.Name %></a><i></i></li>
+                <% }) %>
+                </ul>
+                <!-- S 没有子菜单时输出 -->
+                <!-- E 没有子菜单时输出 -->
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('.page-menu-content ul').find('li:last').addClass('last');
+
+                        $('.page-menu-content > ul > li > a').click(function () {
+                            if ($(this).parent('li').find('ul')) {
+                                $(this).parent('li').find('ul').slideDown('fast');
+                                $(this).parent('li').siblings('li').find('ul').slideUp('fast');
+                                $(this).parent('li').addClass('current').siblings('li').removeClass('current');
+                            }
+                        });
+
+                    });
+                </script>
+            </div>
+        </section>
+        <!-- S page-menu -->
+        <div class="clear"></div>
+        <div id="a1portalSkin_sidebarAreaA" class="QHDEmptyArea sidebar-content"></div>
+    </section>
+    <!-- E sidebar -->
+</div>
+</section>
