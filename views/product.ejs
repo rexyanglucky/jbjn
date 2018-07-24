@@ -1,0 +1,226 @@
+<!-- ==================== S main ==================== -->
+<section class="main">
+  <div class="page-width clearfix">
+    <!-- S content -->
+    <section class="content float-right">
+      <!-- S page-title -->
+      <section class="page-title page-title-inner clearfix">
+        <!-- S breadcrumbs -->
+        <div class="breadcrumbs float-right" skinobjectzone="HtmlBreadCrumb_3715">
+          <span>当前位置：</span>
+          <a class="breadcrumbs-home" href="/index">首页</a>
+          <i>&gt;</i>
+          <a href="/plist?c=1">产品展示</a>
+          <i>&gt;</i>
+          <a href="/plist?c= <%= p.Category.ID %>">
+            <%= p.Category.Name %>
+          </a>
+          <i>&gt;</i>
+          <strong>
+            <%= p.alt %>
+          </strong>
+        </div>
+        <!-- E breadcrumbs -->
+        <!-- S page-name -->
+        <div class="page-name float-left">
+          <h2>
+            <%= p.Category.Name %>
+          </h2>
+        </div>
+        <!-- E page-name -->
+      </section>
+      <!-- E page-title -->
+      <div id="a1portalSkin_mainArea" class="content-wrapper">
+        <!-- Start_Module_74432 -->
+
+        <div class="module-default">
+          <div class="module-inner">
+            <div id="a1portalSkin_ctr7443274432_mainArea" class="module-content">
+              <!-- Start_Module_74432 -->
+              <!-- S product-detail-complete -->
+              <div class="product-detail product-detail-complete product-detail-zoom">
+                <!-- S product-intr -->
+                <div class="product-intr clearfix">
+                  <div class="product-preview">
+                    <!-- S　放大镜 -->
+                    <!-- E　放大镜 -->
+                    <!-- S 图片集 -->
+                    <!-- E 图片集-->
+                    <!-- S　单张图片 -->
+                    <div class="single-img-wrap">
+                      <p>
+                        <img src="<%=p.url %>" alt="<%=p.alt %>" width="450">
+                      </p>
+                    </div>
+                    <!-- E　单张图片 -->
+                  </div>
+                  <!-- end of product-preview -->
+                  <div class="product-info">
+                    <div class="product-info-item">
+                      <div class="product-name">
+                        <h1>
+                          <%= p.alt %>
+                        </h1>
+                      </div>
+                    </div>
+                    <div class="product-info-item">
+                      <div class="product-summary">
+                        <div class="qhd-content">
+                          <p>
+                            产品类别：
+                            <%= p.Category.Name %>
+                          </p>
+                          <p>
+                            咨询 QQ：
+                            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=318559961&amp;site=qq&amp;menu=yes" target="_blank">
+                              <img alt="点击这里给我发消息" border="0" src="http://wpa.qq.com/pa?p=2:1690704269:51" title="点击这里给我发消息">
+                            </a>
+                          </p>
+                          <p>
+                            咨询电话：020-3296 8908
+                          </p>
+                          <p>
+                            产品专员：杨先生 13610166869
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-info-item">
+                      <div class="share-toolbar clearfix">
+                        <!-- S 分享到 -->
+                        <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1440919165444">
+                          <span style="float: left; height: 16px; line-height: 16px; margin: 6px 0 6px 0;">分享到：</span>
+                          <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+                          <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+                          <a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a>
+                          <a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a>
+                          <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+                          <a href="#" class="bds_more" data-cmd="more"></a>
+                        </div>
+                        <script>
+                          window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+                        </script>
+                        <!-- E 分享到 -->
+                      </div>
+                    </div>
+                    <div class="product-info-item product-info-item-last">
+                      <div class="back-category">
+                        <a href="/plist?c=<%=p.Category.ID %>">
+                          <span>查看更多</span>&nbsp;
+                          <span>产品展示</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of product-info -->
+                </div>
+                <!-- E product-intr -->
+                <!-- S product-desc -->
+                <div class="product-desc">
+                  <!-- S tabs -->
+                  <div class="tabs-default">
+                    <div class="placeholder" style="overflow: hidden; font-size: 0px; height: 0px;">&nbsp;</div>
+                    <ul class="tabs-nav clearfix">
+                      <li>
+                        <a href="javascript:;" class="current">产品描述</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">产品参数</a>
+                      </li>
+                      <script type="text/javascript">
+                        $(window).load(function () {
+                          if (!($.browser.msie && ($.browser.version == "6.0"))) {
+                            var _fixedTab = $(".product-desc > .tabs-default > .tabs-nav");
+                            var _placeholder = $('.placeholder');
+                            var _topVal = _fixedTab.offset().top;
+                            var _leftVal = _fixedTab.offset().left;
+                            var _width = _fixedTab.width();
+                            var _height = _fixedTab.height();
+
+                            $(window).scroll(function () {
+                              if ($(window).scrollTop() >= _topVal) {
+                                _fixedTab.addClass("fixed");
+                                _fixedTab.css({ "left": _leftVal, "width": _width });
+                                _placeholder.height(_height);
+                              } else {
+                                _fixedTab.removeClass("fixed");
+                                _fixedTab.removeAttr("style");
+                                _placeholder.height(0);
+                              }
+                            });
+
+                            _fixedTab.find('a').click(function () {
+                              if ($(window).scrollTop() > _topVal) { $(window).scrollTop(_topVal); }
+                            });
+                          }
+                        });
+                      </script>
+                    </ul>
+                    <div class="tabs-panes">
+                      <div class="tab-box clearfix" style="display: block;">
+                        <div class="qhd-content">
+                          <%- p.detial %>
+                        </div>
+                      </div>
+                      <div class="tab-box clearfix" style="display: none;">
+                        <div class="qhd-content">
+                          <%- p.detialimg %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- E tabs -->
+                </div>
+                <!-- E product-desc -->
+                <!-- S product-desc -->
+                <!-- E product-desc -->
+                <!-- S product-desc -->
+                <!-- E product-desc -->
+              </div>
+              <!-- E product-detail-complete -->
+              <!-- End_Module_74432 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- S content -->
+    <!-- S sidebar -->
+    <section class="sidebar float-left">
+      <!-- S page-menu -->
+      <section class="page-menu" skinobjectzone="menu_3898">
+        <div class="page-menu-title">
+          <h3>产品展示</h3>
+        </div>
+        <div class="page-menu-content">
+          <ul>
+            <% cList.forEach(function(c){ %>
+              <li class="<%= c.ID == category.ID ? 'current':''%>"><a href="/plist?c=<%= c.ID %>" target=""><%= c.Name %></a><i></i></li>
+            <% }) %>
+          </ul>
+          <!-- S 没有子菜单时输出 -->
+          <!-- E 没有子菜单时输出 -->
+          <script type="text/javascript">
+            $(document).ready(function () {
+              $('.page-menu-content ul').find('li:last').addClass('last');
+
+              $('.page-menu-content > ul > li > a').click(function () {
+                if ($(this).parent('li').find('ul')) {
+                  $(this).parent('li').find('ul').slideDown('fast');
+                  $(this).parent('li').siblings('li').find('ul').slideUp('fast');
+                  $(this).parent('li').addClass('current').siblings('li').removeClass('current');
+                }
+              });
+
+            });
+          </script>
+        </div>
+      </section>
+      <!-- S page-menu -->
+      <div class="clear"></div>
+      <div id="a1portalSkin_sidebarAreaA" class="QHDEmptyArea sidebar-content"></div>
+    </section>
+    <!-- E sidebar -->
+  </div>
+</section>
+<!-- ==================== E main ==================== -->

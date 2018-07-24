@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head id="Head">
     <%- include('head',{}) -%>
-    <title>广州捷邦节能设备制造有限公司 </title>
+    <title><%= title%> </title>
 </head>
 <body class="font-zh-CN" style="">
     <%- include('js',{}) -%>
@@ -9,45 +9,141 @@
       <!-- ==================== S top ==================== -->
       <%- include('menu',{cList:cList,url: url}) -%>
       <!-- ==================== E top ==================== -->
+      <% if(url ==='/index') {%>
       <!-- ==================== S header ==================== -->
-      <div id="a1portalSkin_headerAreaA" class="header">
-        <!-- Start_Module_74429 -->
-        <div class="module-default">
-            <div class="module-inner">
-                <div id="a1portalSkin_ctr7442974429_mainArea" class="module-content">
-                    <!-- Start_Module_74429 -->
-                    <!-- S slideshow -->
-
-
-                    <div>
-                        <div id="foo1">
-                            <img src="/Portals/897/_thumbs/0738b4ab-387c-4620-b20b-7609800a3f49_0_420_UseHeight.jpg"
-                                height="420" alt="产品展示">
+        <div id="a1portalSkin_headerAreaA" class="header">
+            <!-- Start_Module_74415 -->
+            <a name="13319" id="13319"></a>
+            <div class="module-default">
+                <div class="module-inner">
+                    <div id="a1portalSkin_ctr7441574415_mainArea" class="module-content">
+                        <!-- Start_Module_74415 -->
+                        <!-- S slideshow -->
+                        <div class="slideshow carousel clearfix" style="height: 550px; overflow: hidden;">
+                            <div id="carousel-74415">
+                                <div class="carousel-item">
+                                    <div class="carousel-img">
+                                        <a href="javascript:;" target="">
+                                            <img src="Portals/897/_thumbs/eaf014e6-2f7b-4ec2-aabe-2c76a75e156a_0_550_UseHeight.jpg"
+                                                height="550" alt="广州捷邦" /></a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-img">
+                                        <a href="javascript:;" target="">
+                                            <img src="Portals/897/_thumbs/dbd99d51-c7a0-44f9-9e7d-7856d58a79cd_0_550_UseHeight.jpg"
+                                                height="550" alt="广州捷邦" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-btn carousel-btn-fixed" id="carousel-page-74415">
+                            </div>
                         </div>
-                        <div id="carousel-page" style="display: none"></div>
-                    </div>
 
+                        <script type="text/javascript">
 
-                    <script type="text/javascript">
-                        $(window).bind("load resize", function () {
-                            $("#foo1").carouFredSel({
-                                width: '100%',
-                                items: { visible: 1 },
-                                auto: { pauseOnHover: true, timeoutDuration: 3000 },
-                                swipe: { onTouch: true, onMouse: true },
-                                //pagination: "#carousel-page",
-                                scroll: { fx: "crossfade" }
+                            $(window).bind("load resize", function () {
+                                $("#carousel-74415").carouFredSel({
+                                    width: '100%',
+                                    items: { visible: 1 },
+                                    auto: { pauseOnHover: true, timeoutDuration: 5000 },
+                                    swipe: { onTouch: true, onMouse: true },
+                                    pagination: "#carousel-page-74415"
+                                    //prev   : { button:"#carousel-prev-74415"},
+                                    //next   : { button:"#carousel-next-74415"},
+                                    //scroll   : { fx : "crossfade" }
+                                });
                             });
-                        });
-                    </script>
+                        </script>
 
-                    <!-- E slideshow -->
-                    <!-- End_Module_74429 -->
+                        <!-- E slideshow -->
+                        <!-- End_Module_74415 -->
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
-      <!-- ==================== E Header ==================== -->
+        <!-- ==================== E Header ==================== -->
+      <%} else if(url === '/contact') {%>
+              <!-- ==================== S header ==================== -->
+              <div id="a1portalSkin_headerAreaA" class="header">
+              <!-- Start_Module_74429 -->
+              <div class="module-default">
+                  <div class="module-inner">
+                      <div id="a1portalSkin_ctr7442974429_mainArea" class="module-content">
+                          <!-- Start_Module_74429 -->
+                          <!-- S slideshow -->
+  
+  
+                          <div>
+                              <div id="foo1">
+                                  <img src="/Portals/897/_thumbs/5e34d673-1058-4b1b-aeda-05b0d9001599_0_420_UseHeight.jpg"
+                                      height="420" alt="联系我们">
+                              </div>
+                              <div id="carousel-page" style="display: none"></div>
+                          </div>
+  
+  
+                          <script type="text/javascript">
+                              $(window).bind("load resize", function () {
+                                  $("#foo1").carouFredSel({
+                                      width: '100%',
+                                      items: { visible: 1 },
+                                      auto: { pauseOnHover: true, timeoutDuration: 3000 },
+                                      swipe: { onTouch: true, onMouse: true },
+                                      //pagination: "#carousel-page",
+                                      scroll: { fx: "crossfade" }
+                                  });
+                              });
+                          </script>
+  
+                          <!-- E slideshow -->
+                          <!-- End_Module_74429 -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ==================== E Header ==================== -->
+      <%} else {%>
+        <!-- ==================== S header ==================== -->
+        <div id="a1portalSkin_headerAreaA" class="header">
+            <!-- Start_Module_74429 -->
+            <div class="module-default">
+                <div class="module-inner">
+                    <div id="a1portalSkin_ctr7442974429_mainArea" class="module-content">
+                        <!-- Start_Module_74429 -->
+                        <!-- S slideshow -->
+
+
+                        <div>
+                            <div id="foo1">
+                                <img src="/Portals/897/_thumbs/0738b4ab-387c-4620-b20b-7609800a3f49_0_420_UseHeight.jpg"
+                                    height="420" alt="产品展示">
+                            </div>
+                            <div id="carousel-page" style="display: none"></div>
+                        </div>
+
+
+                        <script type="text/javascript">
+                            $(window).bind("load resize", function () {
+                                $("#foo1").carouFredSel({
+                                    width: '100%',
+                                    items: { visible: 1 },
+                                    auto: { pauseOnHover: true, timeoutDuration: 3000 },
+                                    swipe: { onTouch: true, onMouse: true },
+                                    //pagination: "#carousel-page",
+                                    scroll: { fx: "crossfade" }
+                                });
+                            });
+                        </script>
+
+                        <!-- E slideshow -->
+                        <!-- End_Module_74429 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ==================== E Header ==================== -->
+      <%}%>
       <!-- ==================== S main ==================== -->
       <% if(mainObj){ %>
         <%- include(mainObj.templatePath, mainObj.data) -%>
