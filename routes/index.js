@@ -91,6 +91,8 @@ router.get('/contact', function (req, res, next) {
 
 router.get('/', function (req, res, next) {
   res.redirect("/index");
-})
+});
+
+
 
 module.exports = router;
