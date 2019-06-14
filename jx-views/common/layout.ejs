@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="smart-design-mode">
+<head id="Head">
+    <%- include('head',{}) -%>
+    <title><%= title%> </title>
+</head>
+<body id="smart-body" area="main">
+    <div id="mainContentWrapper" style="background-color: transparent; background-image: none; background-repeat: no-repeat;background-position:0 0; background:-moz-linear-gradient(top, none, none);background:-webkit-gradient(linear, left top, left bottom, from(none), to(none));background:-o-linear-gradient(top, none, none);background:-ms-linear-gradient(top, none, none);background:linear-gradient(top, none, none);;
+    position: relative; width: 100%;min-width:1000px;background-size: auto;" bgScroll="none">
+      <%- include('menu',{cList:cList,url: url}) -%>
+      <!-- ==================== S main ==================== -->
+      <% if(mainObj){ %>
+        <%- include(mainObj.templatePath, mainObj.data) -%>
+      <% } %>
+      <!-- ==================== E main ==================== -->
+      <!-- ==================== S footer ==================== -->
+      <%- include('footer',{})%>
+      <!-- ==================== E footer ==================== -->
+     <!-- <%- include('rightslide',{}) %> -->
+    </div>
+      <%- include('js',{}) -%>
+</body>
+</html>
