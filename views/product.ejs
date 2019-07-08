@@ -12,8 +12,8 @@
           <i>&gt;</i>
           <a href="/plist?c=1">产品展示</a>
           <i>&gt;</i>
-          <a href="/plist?c= <%= p.Category.ID %>">
-            <%= p.Category.Name %>
+          <a href="/plist?c= <%= p.category.ID %>">
+            <%= p.category.Name %>
           </a>
           <i>&gt;</i>
           <strong>
@@ -24,7 +24,7 @@
         <!-- S page-name -->
         <div class="page-name float-left">
           <h2>
-            <%= p.Category.Name %>
+            <%= p.category.Name %>
           </h2>
         </div>
         <!-- E page-name -->
@@ -68,7 +68,7 @@
                         <div class="qhd-content">
                           <p>
                             产品类别：
-                            <%= p.Category.Name %>
+                            <%= p.category.Name %>
                           </p>
                           <p>
                             咨询 QQ：
@@ -105,7 +105,7 @@
                     </div>
                     <div class="product-info-item product-info-item-last">
                       <div class="back-category">
-                        <a href="/plist?c=<%=p.Category.ID %>">
+                        <a href="/plist?c=<%=p.category.ID %>">
                           <span>查看更多</span>&nbsp;
                           <span>产品展示</span>
                         </a>
@@ -159,7 +159,7 @@
                     <div class="tabs-panes">
                       <div class="tab-box clearfix" style="display: block;">
                         <div class="qhd-content">
-                          <%- p.detial %>
+                          <%- p.detail %>
                         </div>
                       </div>
                       <div class="tab-box clearfix" style="display: none;">

@@ -60,7 +60,7 @@ router.get('/product', function (req, res, next) {
       return pDal.getProductByID(pid);
     }).then(r => {
       let pinfo = r[0];
-      pinfo.Category ={ID:pinfo.categoryid,Name:pinfo.Name,Detial:pinfo.Detial};
+      pinfo.category ={ID:pinfo.categoryid,Name:pinfo.Name,Detial:pinfo.Detial};
       data.p = pinfo;
       data.title = pinfo.alt + "-产品展示-广州捷邦"
       let mainObj = {templatePath:'../product',data:{...data}}
